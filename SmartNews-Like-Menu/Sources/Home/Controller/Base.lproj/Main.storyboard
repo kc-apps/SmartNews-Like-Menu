@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SmartNews_Like_Menu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8b-xB-fbK" customClass="TabMenuView" customModule="SmartNews_Like_Menu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hC4-sD-xgh"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjO-fr-snj">
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
+                                <connections>
+                                    <segue destination="UzM-QT-kPK" kind="embed" identifier="embed" id="l3B-4F-VUt"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kjO-fr-snj" firstAttribute="top" secondItem="k8b-xB-fbK" secondAttribute="bottom" id="C30-wX-6d2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kjO-fr-snj" secondAttribute="bottom" id="C6X-eZ-Cf0"/>
+                            <constraint firstItem="kjO-fr-snj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GhR-VM-mhh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k8b-xB-fbK" secondAttribute="trailing" id="Klu-S3-Dy2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kjO-fr-snj" secondAttribute="trailing" id="OnM-xk-Q21"/>
+                            <constraint firstItem="k8b-xB-fbK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="jcK-iZ-2et"/>
+                            <constraint firstItem="k8b-xB-fbK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xgt-71-74f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewTabMenu" destination="k8b-xB-fbK" id="YFl-Yy-vUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="129"/>
+        </scene>
+        <!--Home Page View Controller-->
+        <scene sceneID="Ew8-at-ACi">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="UzM-QT-kPK" customClass="HomePageViewController" customModule="SmartNews_Like_Menu" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBN-55-QFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
